@@ -1,0 +1,40 @@
+shint function odd(shint t, shint n)
+[
+  new shint i;
+
+  for: t < n #
+  perform [
+   i = i + 1;
+   out t; out ' ';
+   t = t + 2;
+  ] #
+
+  return i;
+]
+
+Main
+[
+ new shint a = 1;
+ new shint b = 10;
+
+ new shint q = sA;
+ out 'Вывод числа из шестнадцатиричного вида в десятичный: '; out q; newline;
+
+ new line t = 'Функция выбирающая нечетные числа';
+ out t; newline;
+ out 'Нижний предел: '; out a; newline;
+ out 'Верхний предел: '; out b; newline;
+ out 'Нечeтные числа: '; a = odd(a, b) + 5; newline;
+ out 'Количество чисел плюс 5: '; out a; newline;
+
+ new line s = 'Никита Яшный'; 
+ out 'Строка: '; out s; newline;
+ new shint l;
+ l = LineLen(s);
+ out 'Длина строки: '; out l; newline; 
+
+ new line n = 'Nikita'; out n; newline;
+ new line y = 'Yashny'; out y; newline;
+ out 'Копирование одной строки в другую: '; 
+ CopyLine(n,y); newline;
+]
